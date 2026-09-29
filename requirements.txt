@@ -1,0 +1,9 @@
+# Install a CUDA-enabled PyTorch wheel appropriate for your NVIDIA driver first.
+torch>=2.5,<2.7
+transformers>=4.46,<4.49
+datasets>=2.18,<4
+accelerate>=0.26,<2
+safetensors>=0.4
+sentencepiece>=0.2
+matplotlib>=3.8,<4
+numpy>=1.26,<3
