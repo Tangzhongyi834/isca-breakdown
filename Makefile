@@ -6,14 +6,16 @@ SHELL := /bin/bash
 .NOTPARALLEL:
 .DEFAULT_GOAL := help
 
-PYTHON ?= /home/tangzhongyi/miniconda3/envs/million/bin/python
+PYTHON ?= /root/miniconda3/envs/million/bin/python
 GPU ?= 0
 
-MISTRAL_MODEL ?= /home/shared/models/mistralai/Mistral-7B-v0.1
-LLAMA2_MODEL ?= /home/shared/models/meta-llama/Llama-2-7b-hf
-LLAMA3_MODEL ?= /home/shared/models/meta-llama/Meta-Llama-3-8B-Instruct
-MODELS ?= $(MISTRAL_MODEL) $(LLAMA2_MODEL) $(LLAMA3_MODEL)
-DATASET_PATH ?= /home/shared/datasets/wikitext-2-raw-v1
+MISTRAL_MODEL ?= /cephfs/shared/impact/LLM_models/Mistral-7B-v0.1
+LLAMA2_MODEL_7B ?= /cephfs/shared/impact/LLM_models/llama-2-7b-hf
+LLAMA2_MODEL_13B ?= /cephfs/shared/impact/LLM_models/llama2-13b-hf
+LLAMA3_MODEL ?= /cephfs/shared/impact/LLM_models/llama3.1/Meta-Llama-3.1-8B-Instruct
+MODELS ?= $(LLAMA2_MODEL_13B)
+
+DATASET_PATH ?= /cephfs/shared/impact/LLM_dataset/wikitext-2-raw-v1
 
 # True W4A4 is unavailable; never substitute another precision.
 PRECISIONS ?= fp16 w8a8
